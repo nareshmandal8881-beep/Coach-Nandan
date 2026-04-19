@@ -469,83 +469,97 @@ const HomePage = () => (
 );
 
 const AboutPage = () => {
-  const pillars = [
-    { title: "Nutrition", desc: "Healing through condition-specific whole foods.", icon: <Leaf size={24} /> },
-    { title: "Sleep", desc: "Restoring the body's natural circadian rhythm.", icon: <Play size={24} /> },
-    { title: "Movement", desc: "Scientific exercise protocols for longevity.", icon: <Award size={24} /> },
-    { title: "Mindset", desc: "Reducing cortisol through mindfulness.", icon: <Heart size={24} /> },
-    { title: "Habits", desc: "Sustainable routine tracking for permanent change.", icon: <Star size={24} /> }
-  ];
-
-  const team = [
-    { name: "Coach Nandan", role: "Head Nutritionist", img: "/hero.jpg" },
-    { name: "Dr. Aarti Singh", role: "Hormonal Health Expert", img: "/hero.jpg" },
-    { name: "Sandeep Verma", role: "Mindset & Habits Coach", img: "/hero.jpg" }
-  ];
-
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="page-padding">
       <div className="container">
+      
+        {/* 1. Hero Tagline */}
         <div className="about-grid mb-16">
-          <div className="about-image-wrap"><img src="/hero.jpg" alt="Coach Nandan" className="w-full" /></div>
+          <div className="about-image-wrap"><img src="/hero.jpg" alt="Coach Nandan" className="w-full" style={{ borderRadius: '24px' }} /></div>
           <div className="about-content">
-            <span className="section-tag">About Us</span>
-            <h1 className="section-h2">A Journey from Sickness to Science-Backed Healing.</h1>
-            <p className="about-lead">Founded by Coach Nandan Singh, Aanandam Wellness Center is a movement to reclaim health naturally.</p>
-            <p className="section-desc">Born out of the desire to see a medication-free India, we have spent the last 14 years perfecting a system that addresses the root cause of lifestyle diseases, not just the symptoms.</p>
-          </div>
-        </div>
-        <div className="mission-section mb-16">
-          <div className="section-header text-center" style={{ marginBottom: 40 }}>
-            <span className="section-tag">Our Methodology</span>
-            <h2 className="section-h2">The Five Pillars of Health</h2>
-          </div>
-          <div className="services-grid">
-            {pillars.map((p, i) => (
-              <div key={i} className="service-card text-center">
-                <div className="service-emoji" style={{ color: '#E87722', marginBottom: 20 }}>{p.icon}</div>
-                <h3 className="service-title">{p.title}</h3>
-                <p className="service-desc">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="team-section">
-          <div className="section-header text-center" style={{ marginBottom: 40 }}>
-            <span className="section-tag">Our Experts</span>
-            <h2 className="section-h2">Meet Our Specialists</h2>
-          </div>
-          <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-            {team.map((t, i) => (
-              <div key={i} className="team-member-card" style={{ padding: '24px', textAlign: 'center' }}>
-                <div style={{ width: '120px', height: '120px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 20px', border: '4px solid var(--accent)' }}>
-                  <img src={t.img} alt={t.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-                <h3 className="service-title" style={{ fontSize: '20px', marginBottom: '4px' }}>{t.name}</h3>
-                <p className="section-tag" style={{ fontSize: '12px', background: 'transparent', padding: 0 }}>{t.role}</p>
-              </div>
-            ))}
+            <span className="section-tag">About Coach Nandan</span>
+            <h1 className="section-h2" style={{ fontSize: '42px' }}>From watching my mother suffer to helping 22,000+ families heal — this is why I do what I do.</h1>
+            <p className="about-lead">Coach Nandan Singh · Raipur · Wellness Coach, Nutritionist & Founder, Aanandam Wellness Center</p>
+            <div className="about-credentials" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '24px' }}>
+              <div className="cred-item" style={{ background: 'var(--bg-alt)', padding: '8px 16px', borderRadius: '100px', fontWeight: 600, color: 'var(--accent)' }}>14+ years Natural health</div>
+              <div className="cred-item" style={{ background: 'var(--bg-alt)', padding: '8px 16px', borderRadius: '100px', fontWeight: 600, color: 'var(--accent)' }}>B.Pharma + MBA</div>
+              <div className="cred-item" style={{ background: 'var(--bg-alt)', padding: '8px 16px', borderRadius: '100px', fontWeight: 600, color: 'var(--accent)' }}>Second income</div>
+            </div>
           </div>
         </div>
 
-        <div className="history-text-section" style={{ marginTop: '80px', background: '#FAFAFA', padding: '60px', borderRadius: '32px', border: '1px solid var(--border)' }}>
+        {/* 2. His Origin Story */}
+        <div className="history-text-section mb-16" style={{ background: '#FAFAFA', padding: '60px', borderRadius: '32px', border: '1px solid var(--border)' }}>
           <div className="section-header text-center" style={{ marginBottom: 40 }}>
-            <span className="section-tag">Our Heritage & Partnership</span>
-            <h2 className="section-h2">Lifestyle Nutrition Centre</h2>
+            <span className="section-tag">Where It Started</span>
+            <h2 className="section-h2">In 2009, I lost my father.</h2>
           </div>
-          <div style={{ color: 'var(--text-secondary)', fontSize: '18px', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '900px', margin: '0 auto' }}>
-            <div>
-              <h3 style={{ fontSize: '26px', color: 'var(--text-primary)', marginBottom: '16px', fontFamily: '"Playfair Display", serif', fontWeight: 700 }}>Herbalife Health Nutrition Products</h3>
-              <p>Lifestyle Nutrition Centre in Pakhowal Road has a wide range of Herbalife Health Nutrition products and services to cater to the varied requirements of their customers. The staff at this establishment are courteous and prompt at providing any assistance. They readily answer any queries or questions that you may have. This establishment is functional from 07:00 – 18:00.</p>
+          <div style={{ color: 'var(--text-secondary)', fontSize: '18px', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <p>What followed was something I wasn't prepared for. My mother — already grieving — began falling apart in ways medicines couldn't fix. Digestion issues. Sleepless nights. A body that seemed to be fighting against her. Doctor after doctor. Prescription after prescription. Nothing worked.</p>
+            <p>I was a B.Pharma and MBA professional. I understood medicine. And yet I was helpless.</p>
+            <p>Then I discovered something that changed everything — not a drug, not a supplement, but a simple truth: <strong>the body heals when you give it the right conditions.</strong></p>
+            <p>I applied the Five Pillars of Health — Mindset, Nutrition, Hydration, Proper Rest, and Exercise — to my mother's daily life. Slowly, steadily, she transformed. Her digestion came back. Her sleep returned. Her energy, her confidence, her smile — all of it.</p>
+            <p>That moment became my mission. If these principles could heal my mother, they could heal anyone.</p>
+          </div>
+        </div>
+
+        {/* 3. Credentials & Proof */}
+        <div className="stats-section mb-16" style={{ border: 'none', padding: '40px 0' }}>
+          <div className="text-center mb-12">
+            <h2 className="section-h2" style={{ fontSize: '32px' }}>Credentials & Proof</h2>
+            <p className="section-desc">Today, I'm a certified nutritionist and senior wellness coach with over 14 years of experience in natural health transformation — and the founder of Aanandam Wellness Center in Raipur, Chhattisgarh.</p>
+          </div>
+          <div className="stats-grid">
+            <div className="stat-block"><span className="stat-num">22,000+</span><span className="stat-label">Lives transformed</span></div>
+            <div className="stat-block"><span className="stat-num">14+</span><span className="stat-label">Years of experience</span></div>
+            <div className="stat-block"><span className="stat-num">0</span><span className="stat-label">Extreme diets used</span></div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '40px', maxWidth: '800px', margin: '40px auto 0' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '18px', lineHeight: '1.8' }}>I specialize in helping people overcome lifestyle conditions — weight issues, thyroid imbalances, diabetes, osteoporosis, digestion disorders, and women's health concerns — without medications or extreme diets.</p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '18px', lineHeight: '1.8', marginTop: '16px' }}>My clients include housewives, working professionals, business owners, and students — people who had tried everything and found lasting results only when they changed the foundation, not just the symptom.</p>
+          </div>
+        </div>
+
+        {/* 4. What he stands for & 5. What I offer */}
+        <div className="about-grid mb-16 pt-12" style={{ borderTop: '1px solid var(--border)', alignItems: 'flex-start' }}>
+          <div>
+            <span className="section-tag">Values & Philosophy</span>
+            <h2 className="section-h2" style={{ fontSize: '36px' }}>I believe true health doesn't start with a medicine bottle.</h2>
+            <div style={{ color: 'var(--text-secondary)', fontSize: '17px', lineHeight: '1.8', marginTop: '24px' }}>
+              <p>I've seen people spend years suppressing symptoms without ever addressing the cause. My work is about going deeper — building habits, shifting mindset, and creating a lifestyle where the body can do what it was always designed to do: heal itself.</p>
+              <p style={{ marginTop: '16px' }}>Before becoming a wellness coach, I spent years working with a Student Welfare Society — running blood donation camps, organ donation awareness drives, and health education programs in schools and colleges. Service has always been at the core of who I am. The platform changed. The purpose didn't.</p>
             </div>
-            <div>
-              <h3 style={{ fontSize: '26px', color: 'var(--text-primary)', marginBottom: '16px', fontFamily: '"Playfair Display", serif', fontWeight: 700 }}>About Lifestyle Nutrition Centre</h3>
-              <p>Established in the year 2002, Lifestyle Nutrition Centre in Pakhowal Road, Ludhiana is a top player in the category Herbal Health Care Product Distributors-Herbalife in the Ludhiana. This well-known establishment acts as a one-stop destination servicing customers both local and from other parts of Ludhiana. Over the course of its journey, this business has established a firm foothold in its industry. The belief that customer satisfaction is as important as their products and services, have helped this establishment garner a vast base of customers, which continues to grow by the day. This business employs individuals that are dedicated towards their respective roles and put in a lot of effort to achieve the common vision and larger goals of the company.</p>
-              <br/>
-              <p>In the near future, this business aims to expand its line of products and services and cater to a larger client base. In Ludhiana, this establishment occupies a prominent location in Pakhowal Road. It is an effortless task in commuting to this establishment as there are various modes of transport readily available. It is known to provide top service in the following categories: Herbal Health Care Product Distributors-Herbalife, Nutritional Supplement Retailers, Health Care Product Distributors-Herbalife, Weight Loss Product Distributors-Herbalife, Skin Care Product Manufacturers-Herbalife, Herbal Shampoo Distributors, Herbalife Weight Loss Product Distributors, Herbalife Weight Managemnet Products, Skin Care Product Manufacturers.</p>
+          </div>
+          <div style={{ background: 'var(--bg-secondary)', padding: '40px', borderRadius: '24px' }}>
+            <span className="section-tag" style={{ background: '#fff' }}>What I Offer</span>
+            <h3 style={{ fontSize: '24px', fontFamily: '"Playfair Display", serif', marginTop: '20px', marginBottom: '16px' }}>For Health Seekers</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '16px', lineHeight: '1.6', marginBottom: '24px' }}>Whether you're dealing with a specific health challenge or simply want to build a stronger, more energetic version of yourself — I work with you personally to create a plan that fits your body, your routine, and your goals.</p>
+            <ul style={{ listStyleType: 'none', paddingLeft: '0', color: 'var(--text-secondary)', fontSize: '16px', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <li><strong style={{ color: 'var(--text-primary)' }}>1-on-1 wellness coaching</strong> — personalized nutrition, lifestyle design, and accountability</li>
+              <li><strong style={{ color: 'var(--text-primary)' }}>Group health programs</strong> — community-based transformation for families and teams</li>
+              <li><strong style={{ color: 'var(--text-primary)' }}>Ongoing support</strong> — because real change takes time, not a 7-day detox</li>
+            </ul>
+            <p style={{ marginTop: '24px', color: 'var(--accent)', fontWeight: 600 }}>My approach: no medications, no crash diets. Just science-backed lifestyle changes built around the Five Pillars of Health.</p>
+          </div>
+        </div>
+
+        {/* 6. Income Opportunity Angle & Closing CTA */}
+        <div className="contact-section mb-16" style={{ background: 'var(--bg-alt)', padding: '60px', borderRadius: '32px', textAlign: 'center', paddingBottom: '60px' }}>
+          <span className="section-tag mx-auto">Income Opportunity</span>
+          <h2 className="section-h2" style={{ maxWidth: '700px', margin: '0 auto 24px', fontSize: '36px' }}>Turn Your Passion for Natural Wellness into a Meaningful Income.</h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '18px', maxWidth: '700px', margin: '0 auto 24px', lineHeight: '1.8' }}>Health changed my life. And over the years, it's also created a second income stream for hundreds of people in my community — without leaving their existing careers. If you're someone who believes in natural wellness and wants to turn that passion into a meaningful, flexible income, I can show you exactly how the model works.</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '18px', maxWidth: '700px', margin: '0 auto 32px', lineHeight: '1.8' }}>People in my network — from homemakers to salaried professionals — are earning consistently while helping others live healthier lives. It starts with a conversation.</p>
+          
+          <div style={{ background: '#fff', padding: '40px', borderRadius: '24px', maxWidth: '800px', margin: '40px auto 0', textAlign: 'left', border: '1px solid var(--border)' }}>
+            <h3 style={{ fontSize: '28px', fontFamily: '"Playfair Display", serif', marginBottom: '16px' }}>Ready to transform your health — or your income?</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '16px', lineHeight: '1.8', marginBottom: '24px' }}>I'm based in Raipur, but I work with people across India and globally. Whether you want to feel better, lose weight, manage a health condition, or build a second income doing something meaningful — let's talk. Join the health movement. Because a healthier you isn't just possible — it's closer than you think.</p>
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+              <Link to="/contact" className="btn-primary">Book a free consultation <ArrowRight size={16} /></Link>
+              <a href="https://wa.me/919827245171" target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{ background: '#25D366', color: 'white', borderColor: '#25D366' }}><MessageCircle size={18} /> WhatsApp me</a>
             </div>
           </div>
         </div>
+
       </div>
     </motion.div>
   );
