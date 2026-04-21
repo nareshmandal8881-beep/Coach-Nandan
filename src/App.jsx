@@ -127,7 +127,7 @@ const Hero = () => (
         <motion.div className="hero-left" initial="hidden" animate="visible">
           <motion.div className="hero-eyebrow" variants={fadeUp(0)}>
             <span className="eyebrow-dot" />
-            Certified Nutritionist · Raipur, India
+            Senior Wellness Coach · Raipur, India
           </motion.div>
           <motion.h1 className="hero-headline" variants={fadeUp(0.1)}>
             22000 Families<br />Healed.{' '}
