@@ -236,6 +236,15 @@ const BeforeAfter = () => {
   );
 };
 
+const YOUTUBE_SHORTS = [
+  "0XkFeQbrQtw",
+  "i2IVzUf_94I",
+  "BGnnbZ0JNcM",
+  "LJ8l7MDgI_4",
+  "7IZyXEJIudw",
+  "Ys6oA27NhMw"
+];
+
 const VideoTestimonials = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
@@ -248,12 +257,23 @@ const VideoTestimonials = () => {
           <h2 className="section-h2 white-h2">Don't Take Our<br />Word For It.</h2>
         </motion.div>
         <div className="video-grid">
-          {[1, 2, 3].map(i => (
-            <motion.div key={i} className="video-card" initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: i * 0.14 }}>
-              <div className="video-thumb"><div className="play-btn"><Play size={20} fill="white" /></div><div className="video-result-badge">Result #{i}</div></div>
+          {YOUTUBE_SHORTS.map((id, i) => (
+            <motion.div key={id} className="video-card" initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: i * 0.1 }}>
+              <div className="video-thumb" style={{ aspectRatio: '9/16' }}>
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src={`https://www.youtube.com/embed/${id}`} 
+                  title={`Result #${i + 1}`} 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                  style={{ position: 'absolute', top: 0, left: 0 }}
+                ></iframe>
+              </div>
               <div className="video-info">
                 <p className="video-quote">"Life changed completely..."</p>
-                <div className="video-meta"><strong>Client Name</strong><span>Outcome Details</span></div>
+                <div className="video-meta"><strong>Client {i + 1}</strong><span>Outcome Details</span></div>
               </div>
             </motion.div>
           ))}
