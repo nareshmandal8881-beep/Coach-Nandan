@@ -376,7 +376,7 @@ const Contact = () => {
             <span className="section-tag">Let's Connect</span>
             <h2 className="section-h2">Start Your Life Plan Today.</h2>
             <div className="contact-info-list" style={{ marginTop: 32 }}>
-              <div className="info-item"><div className="info-icon"><MapPin size={18} /></div><div><p className="info-label">Corporate Address</p><p className="info-text">First Floor, Raipur Rd, above Aarti Medical Stores, Krishna Nagar, Ramnagar, Kota, Raipur, Gudhiyari, Chhattisgarh 492009</p></div></div>
+              <div className="info-item"><div className="info-icon"><MapPin size={18} /></div><div><p className="info-label">Corporate Address</p><p className="info-text">Lig 722, Sec 2, DDU Nagar, Raipur CG 492001</p></div></div>
               <div className="info-item"><div className="info-icon"><Mail size={18} /></div><div><p className="info-label">Email Us</p><p className="info-text"><a href="mailto:Nandansinghgod@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>Nandansinghgod@gmail.com</a></p></div></div>
               <div className="info-item"><div className="info-icon"><MessageCircle size={18} /></div><div><p className="info-label">Contact No.</p><p className="info-text">+91 98272 45171</p></div></div>
             </div>
@@ -772,7 +772,7 @@ const ContactPage = () => (
           <div className="contact-info-list" style={{ marginTop: 40, display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div className="info-item" style={{ marginBottom: 0 }}>
               <div className="info-icon"><MapPin size={18} /></div>
-              <div><p className="info-label">Corporate Address</p><p className="info-text">First Floor, Raipur Rd, above Aarti Medical Stores, Krishna Nagar, Ramnagar, Kota, Raipur, Gudhiyari, Chhattisgarh 492009</p></div>
+              <div><p className="info-label">Corporate Address</p><p className="info-text">Lig 722, Sec 2, DDU Nagar, Raipur CG 492001</p></div>
             </div>
             <div className="info-item" style={{ marginBottom: 0 }}>
               <div className="info-icon"><Mail size={18} /></div>
@@ -785,7 +785,7 @@ const ContactPage = () => (
           </div>
           <div className="map-placeholder" style={{ marginTop: '30px', height: '300px', borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--border)' }}>
             <iframe 
-              src="https://maps.google.com/maps?q=First+Floor,+Raipur+Rd,+above+Aarti+Medical+Stores,+Krishna+Nagar,+Ramnagar,+Kota,+Raipur,+Gudhiyari,+Chhattisgarh+492009&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=Lig+722,+Sec+2,+DDU+Nagar,+Raipur+CG+492001&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
