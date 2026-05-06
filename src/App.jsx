@@ -146,17 +146,7 @@ const Hero = () => (
         </motion.div>
       </div>
     </section>
-    <div className="trust-bar">
-      <div className="container trust-container">
-        <div className="trust-slider">
-          <div className="trust-track">
-            {['NBHWC', 'HSSC', 'Niti Aayog', 'MAX Healthcare', 'UCSF', 'NBHWC', 'HSSC', 'Niti Aayog', 'MAX Healthcare', 'UCSF'].map((name, i) => (
-              <div key={i} className="trust-logo">{name}</div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+
   </>
 );
 
